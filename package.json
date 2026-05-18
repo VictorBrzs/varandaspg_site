@@ -1,0 +1,20 @@
+{
+  "name": "varandas-restaurante-website",
+  "version": "1.0.0",
+  "description": "Website profissional para Varandas Restaurante em Praia Grande",
+  "private": true,
+  "homepage": "https://varandas-restaurante.com",
+  "author": "Your Name",
+  "license": "All Rights Reserved",
+  "scripts": {
+    "dev": "python -m http.server 3000",
+    "serve": "python -m http.server 8000"
+  },
+  "keywords": [
+    "restaurante",
+    "website",
+    "praia-grande",
+    "seafood",
+    "brazilian-cuisine"
+  ]
+}
