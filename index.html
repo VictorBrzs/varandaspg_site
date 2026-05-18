@@ -1,16 +1,387 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Varandas Restaurante - Redirecionando...</title>
-    <script>
-        // Redirecionar para a página principal
-        window.location.href = './varandas_restaurante_oficial/code.html';
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Varandas Restaurante - Praia Grande</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&amp;family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface-variant": "#45483e",
+                        "on-surface": "#1b1c19",
+                        "primary-fixed": "#d7e9b3",
+                        "tertiary-fixed": "#e0e5d2",
+                        "surface-container": "#f0eee9",
+                        "surface-container-highest": "#e4e2dd",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed": "#241a05",
+                        "inverse-surface": "#30312e",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-container": "#c8cebb",
+                        "on-tertiary-fixed": "#181d12",
+                        "outline-variant": "#c6c8ba",
+                        "on-primary": "#ffffff",
+                        "surface-bright": "#fbf9f4",
+                        "primary": "#35431c",
+                        "tertiary-fixed-dim": "#c4c9b6",
+                        "secondary-fixed-dim": "#d7c4a2",
+                        "surface-container-low": "#f5f3ee",
+                        "surface-tint": "#546439",
+                        "on-secondary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed": "#f4e0bd",
+                        "on-error": "#ffffff",
+                        "secondary-container": "#f1ddba",
+                        "surface": "#fbf9f4",
+                        "surface-container-high": "#eae8e3",
+                        "outline": "#76786d",
+                        "tertiary-container": "#525849",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed-variant": "#43493b",
+                        "on-primary-fixed": "#131f00",
+                        "secondary": "#6b5d41",
+                        "primary-fixed-dim": "#bccd99",
+                        "on-secondary-fixed-variant": "#52452b",
+                        "on-primary-container": "#c0d29d",
+                        "on-primary-fixed-variant": "#3d4c23",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-primary": "#bccd99",
+                        "tertiary": "#3b4133",
+                        "primary-container": "#4c5b31",
+                        "on-background": "#1b1c19",
+                        "background": "#fbf9f4",
+                        "surface-variant": "#e4e2dd",
+                        "on-secondary-container": "#6f6145",
+                        "surface-dim": "#dbdad5",
+                        "inverse-on-surface": "#f2f1ec"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "container-max": "1200px",
+                        "base": "8px",
+                        "section-padding-desktop": "120px",
+                        "section-padding-mobile": "64px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Playfair Display"],
+                        "headline-md": ["Playfair Display"],
+                        "body-lg": ["Be Vietnam Pro"],
+                        "display-lg": ["Playfair Display"],
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "body-md": ["Be Vietnam Pro"],
+                        "label-md": ["Be Vietnam Pro"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["40px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "headline-md": ["28px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "display-lg": ["56px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
     </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
 </head>
-<body>
-    <p>Redirecionando para o Varandas Restaurante...</p>
-    <p>Se não for redirecionado automaticamente, <a href="./varandas_restaurante_oficial/code.html">clique aqui</a>.</p>
-</body>
-</html>
+<body class="bg-surface text-on-surface font-body-md antialiased pb-[80px] md:pb-0">
+<!-- TopAppBar -->
+<header class="bg-surface/90 dark:bg-inverse-surface/90 backdrop-blur-md border-b border-outline-variant/30 shadow-sm flex justify-between items-center w-full px-4 h-16 z-50 docked full-width top-0 sticky">
+<button aria-label="Menu" class="text-primary dark:text-primary-fixed-dim hover:bg-surface-container-high transition-colors p-2 rounded-full">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<div class="font-headline-md text-headline-md tracking-tighter text-primary dark:text-primary-fixed-dim">
+            Varandas
+        </div>
+<button class="font-label-md text-label-md bg-primary text-on-primary px-4 py-2 rounded-full hover:bg-primary/90 transition-colors">
+            RESERVAR
+        </button>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[80vh] flex flex-col justify-end pb-12 pt-24 px-4 bg-surface-container-low" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.8)), url('https://lh3.googleusercontent.com/aida-public/AB6AXuAlRGtbK7tVkA7xYTq7oUMX4LeA-lbgDSRx6XSdvzwXvhCkUmeZ-siA6A45Kx9QVWkmngHZQ0cQgr0fBGb9UubvmLgqWJjxTpS6ZiDi2PZHlRK7cXuutu93mDzgF0linf18e86TCTrpoSpVdMe0jJ8a-AbQmt8K7qxIyCCwLzPVPGZ-9N4xTrNWcLSjcCoHCvzyZ2W1j1p502cejlBbFJjQX1BXuQ3bYCEiQADEX8agLDWF926zzxETRLAbC6icKpDOEcwr8yrvEYc'); background-size: cover; background-position: center;">
+<div class="container mx-auto max-w-container-max z-10 text-center">
+<span class="font-label-md text-label-md text-secondary-fixed mb-4 block uppercase tracking-widest">Self Service À Vontade</span>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-primary mb-6 md:font-display-lg md:text-display-lg">Buffet premium no almoço e <i class="font-light">jantar à la carte com vista para o mar.</i></h1>
+<p class="font-body-lg text-body-lg text-surface-variant mb-8 max-w-2xl mx-auto">
+                    Comida caseira, variedade todos os dias e sobremesa cortesia para adoçar seu almoço em Praia Grande.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="bg-primary text-on-primary font-label-md text-label-md py-4 px-8 rounded-full flex items-center justify-center gap-2 hover:bg-primary-container transition-colors shadow-lg">
+<span class="material-symbols-outlined">chat</span>
+                        WHATSAPP
+                    </button>
+<button class="bg-secondary-fixed text-on-secondary-fixed font-label-md text-label-md py-4 px-8 rounded-full flex items-center justify-center gap-2 hover:bg-secondary-container transition-colors shadow-lg">
+<span class="material-symbols-outlined">location_on</span>
+                        VER LOCALIZAÇÃO
+                    </button>
+</div>
+</div>
+</section>
+<!-- Sobre Section -->
+<section class="py-section-padding-mobile px-4 bg-surface" id="sobre">
+<div class="container mx-auto max-w-container-max flex flex-col lg:flex-row gap-12 items-center">
+<div class="w-full lg:w-1/2">
+<span class="font-label-md text-label-md text-secondary mb-2 block uppercase tracking-wider">Sobre o Varandas</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mb-6">
+                        Mais que um restaurante, um lugar para bons momentos.
+                    </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">Localizado na divisa entre Aviação e Guilhermina, o Varandas Restaurante oferece uma vista privilegiada para o mar de Praia Grande. Unimos a tradição do buffet variado no almoço com a sofisticação do jantar à la carte, preparando cada prato com ingredientes frescos e o carinho da culinária caiçara.</p>
+<ul class="space-y-4">
+<li class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">restaurant</span>
+</div>
+<span class="font-body-md text-body-md text-on-surface-variant">Buffet à vontade com grande variedade</span>
+</li>
+<li class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">cake</span>
+</div>
+<span class="font-body-md text-body-md text-on-surface-variant">Sobremesa cortesia todos os dias</span>
+</li>
+<li class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">deck</span>
+</div>
+<span class="font-body-md text-body-md text-on-surface-variant">Ambiente confortável e familiar</span>
+</li>
+</ul>
+</div>
+<div class="w-full lg:w-1/2 relative">
+<div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg bg-surface-container">
+<img alt="Ambiente do restaurante Varandas" class="w-full h-full object-cover" data-alt="A warm, inviting interior of a high-end coastal restaurant. The space features wooden tables, comfortable seating, and subtle botanical elements. Warm, soft lighting from hanging pendant lamps illuminates the dining area, creating a cozy and sophisticated atmosphere. The color palette is earthy, with natural wood tones, beige walls, and pops of green from potted plants." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCi19g8CBrdRSk0kjuPokNoU_brn7NrC01r31dPGr3IPdXmIpyTtngg5BCrQ7uqbIS-3cfGWxxCEOwoLlxlHQGp8rY_XJdEfi7pYhbnwsbHDU1fzw-l65q61_IEnDAC-qKjnKT7gADPZV9iuOo5MKHp-cX3rl2ZnUyzxP8T_ckvEmOQUTVwnV9ILedeR-WwF0HW3lZ_nxR3XWqdnynTDALckjcWA7U0aHg1THN9YwownptPIsLYqcNPFJ1tRIznNR2V-Ep0ethWk70"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Cardápio Section (Bento Grid) -->
+<section class="py-section-padding-mobile px-4 bg-surface-container-low" id="cardapio">
+<div class="container mx-auto max-w-container-max">
+<div class="text-center mb-12">
+<span class="font-label-md text-label-md text-secondary mb-2 block uppercase tracking-wider">Buffet Completo</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary">Variedade para todos os gostos</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8 lg:grid-cols-5">
+<!-- Saladas -->
+<div class="relative group rounded-2xl overflow-hidden aspect-square shadow-[0_4px_20px_rgba(0,0,0,0.05)] cursor-pointer">
+<img alt="Saladas" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A fresh, vibrant salad bowl filled with mixed greens, cherry tomatoes, cucumbers, and delicate herbs. The lighting is bright and natural, highlighting the crisp textures and bright colors of the vegetables. The bowl sits on a rustic wooden table, embodying a fresh, organic, and healthy aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-18WrJItuayVWT8mAcrr3498sYuhxJbjTpG-nAvqYYO66qLJt7HvaHoaqPPbRrVoL4bIu--SeIy6bbCotnUvePt01te77EHs6k-xXZuaIE26tFaEW-xb9i-FB_-oYwRyIup2uvSWBiec5SS36B3EvkRMnTqd0yu7JzuDW3jxcmzrhDE4JmAnma6IzFwPwL8gQS5rVo-IOKOrU_JqgLdsa4gxqEVbnXf0ga5Xk9Hop54FoYk4WezmmJrCT72l0ZdR9jiVAGsoRfyQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-6">
+<div class="w-8 h-8 rounded-full bg-surface/90 flex items-center justify-center text-primary mb-2 shadow-sm">
+<span class="material-symbols-outlined text-[18px]">eco</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-primary">Saladas</h3>
+<p class="font-body-md text-body-md text-surface-variant/80">Frescas e variadas</p>
+</div>
+</div>
+<!-- Pratos Quentes -->
+<div class="relative group rounded-2xl overflow-hidden aspect-square shadow-[0_4px_20px_rgba(0,0,0,0.05)] cursor-pointer">
+<img alt="Pratos Quentes" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A close-up shot of a rich, steaming hot dish, likely a seafood paella or stew, served in an elegant ceramic bowl. Rich red and orange hues dominate, with plump shrimp and fresh herbs garnishing the top. The warm, directional lighting emphasizes the savory textures and comforting appeal of the hot meal." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqCj_TNHqYzC10PZ02nqcoKAWRVFNgUBMkiuHiLXs8UL9MbYXZ-hXNP3UBqBnzRwPYZGZeckAP1YfhT4bWd0Rn1n3aVh_fmTADKEzaJ6Q7jgf_3ppPR1w4MT1ItRxxe6f79gC6nE1Tgi-A5Gzc5O9ro9x5eq1AiLNRJkurV9TK4Cplm5MmOSsphx_WkYR1VBpDqecx9dcutpYeVSK7ILo6BEWDzPqavV-els0E4Ous__zUa34Ho3Muqm05LSHycShhYL2GTNEuyes"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-6">
+<div class="w-8 h-8 rounded-full bg-surface/90 flex items-center justify-center text-primary mb-2 shadow-sm">
+<span class="material-symbols-outlined text-[18px]">local_fire_department</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-primary">Pratos Quentes</h3>
+<p class="font-body-md text-body-md text-surface-variant/80">Sabor de comida caseira</p>
+</div>
+</div>
+<!-- Carnes -->
+<div class="relative group rounded-2xl overflow-hidden aspect-square shadow-[0_4px_20px_rgba(0,0,0,0.05)] cursor-pointer">
+<img alt="Carnes" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Succulent slices of grilled meat, cooked to perfection with grill marks, served on a dark slate board. Accompanied by a sprig of fresh rosemary and sea salt. The lighting is moody and focused, highlighting the juicy texture and savory glaze of the meat against the dark, sophisticated background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkeVv0gwcqj7h3IO1AFmg53q056ksKeSp6d5awb6i2EmJ2qMkWnVonbDf82IPpX1QTALm6wq9giofhzzMTt9R4PmiVMNkpjg94KiAVxoqfkfsjePi9hTALuCwCebH1r1CSRwt4YTPIMjtXbTGoZX9Wl7RC2hCKNf8J6PN8PI42q_T9gjGWl6c6njruuFBI3cECerqA1XPMfB3DP9S_SwnqEMBEQVWdWE6fvQDMffAeT2WhM4_lXrBNYOERnRWQpMlyw_055G-angU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-6">
+<div class="w-8 h-8 rounded-full bg-surface/90 flex items-center justify-center text-primary mb-2 shadow-sm">
+<span class="material-symbols-outlined text-[18px]">set_meal</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-primary">Carnes</h3>
+<p class="font-body-md text-body-md text-surface-variant/80">Suculentas e bem preparadas</p>
+</div>
+</div>
+<!-- Sobremesas -->
+<div class="relative group rounded-2xl overflow-hidden aspect-square shadow-[0_4px_20px_rgba(0,0,0,0.05)] cursor-pointer">
+<img alt="Sobremesas" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A decadent, rich chocolate cake slice presented elegantly on a light ceramic plate. The cake has a glossy ganache finish and is garnished with fresh berries and a mint leaf. Soft, diffused natural light illuminates the dessert, emphasizing its indulgent texture and creating a mouth-watering, premium presentation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7-kpVpQNGfIWbgkhwgtnxWODsUa_vcPcNOwZ9Sl1YCmfkOFIEQbXWgaJWLxIvd3814X_TW_CKH-Hcrgpwzdrn81oJN_cw1Np8-hdnZ2-usBkZuyAJsx_-CGACbmn9qJaYkqHiPLa5QNKEo4CQu1BV9wXDLtju-dbC_MBZw3L-V4TaI2nHdnKjwU9oOKCZlXDbe3rB10RYT4vi-bX0nruS4Ydb8wjiYS1btq26iYZErVzE28ITY1lqlS6eCQgVp_hWYpPtYPl4V3o"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-6">
+<div class="w-8 h-8 rounded-full bg-surface/90 flex items-center justify-center text-primary mb-2 shadow-sm">
+<span class="material-symbols-outlined text-[18px]">cake</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-primary">Sobremesas</h3>
+<p class="font-body-md text-body-md text-surface-variant/80">Cortesia todos os dias</p>
+</div>
+</div><div class="relative group rounded-2xl overflow-hidden aspect-square shadow-[0_4px_20px_rgba(0,0,0,0.05)] cursor-pointer"><img alt="Pratos de Assinatura" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFlWej4myPBpbGCL2xM8wrYFiKcayEM9wUTtVkV23gvOrVXcyhXef9STBBoHGqo08y0EoJeyJIF0jX_zJh68Op7qRpc3-fcsj-UrlMb9zU3srQ7kusQd7mXxeeB4YMIVnc2SNAew6cz5BTmU-DvTVlROwfIUTK5EkYTmm5bUnghBMG80lsOpmL0jFL5j4hHSi3kKvyExUY5YotL5YTmtNvn4j8S8Ld1MWyVc2knqjM48HWSGvAqvAsUUJgPzL3FClt_b7tXpRvtVY"/><div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-6"><div class="w-8 h-8 rounded-full bg-surface/90 flex items-center justify-center text-primary mb-2 shadow-sm"><span class="material-symbols-outlined text-[18px]">verified</span></div><h3 class="font-headline-md text-headline-md text-on-primary">Assinaturas</h3><p class="font-body-md text-body-md text-surface-variant/80">Pratos exclusivos à la carte</p></div></div>
+</div>
+<div class="flex justify-center mt-8">
+<button class="bg-primary text-on-primary font-label-md text-label-md py-3 px-6 rounded-full border border-primary hover:bg-transparent hover:text-primary transition-colors">
+                        VER CARDÁPIO COMPLETO
+                    </button>
+</div>
+</div>
+</section>
+<!-- Avaliações Section -->
+<section class="py-section-padding-mobile px-4 bg-surface" id="avaliacoes">
+<div class="container mx-auto max-w-container-max">
+<div class="flex flex-col md:flex-row gap-12 items-center">
+<div class="w-full md:w-1/3 text-center md:text-left">
+<span class="font-label-md text-label-md text-secondary mb-2 block uppercase tracking-wider">Avaliações</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mb-6">Quem conhece, recomenda!</h2>
+<div class="flex items-center justify-center md:justify-start gap-4 mb-4">
+<div class="text-4xl font-bold text-on-surface">4.8</div>
+<div class="flex text-yellow-500">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star_half</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">+600 avaliações no Google</p>
+</div>
+<div class="w-full md:w-2/3 flex overflow-x-auto snap-x snap-mandatory gap-6 pb-8 hide-scrollbar">
+<!-- Depoimento 1 -->
+<div class="min-w-[85%] md:min-w-[300px] snap-center bg-surface-container-low p-6 rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-outline-variant/20 relative">
+<span class="material-symbols-outlined text-4xl text-secondary-fixed/50 absolute top-4 left-4">format_quote</span>
+<p class="font-body-md text-body-md text-on-surface-variant mt-8 mb-6 italic">"Comida muito saborosa, ambiente agradável e atendimento espetacular!"</p>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold">M</div>
+<div>
+<div class="font-label-md text-label-md text-on-surface">Mariana S.</div>
+</div>
+</div>
+</div>
+<!-- Depoimento 2 -->
+<div class="min-w-[85%] md:min-w-[300px] snap-center bg-surface-container-low p-6 rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-outline-variant/20 relative">
+<span class="material-symbols-outlined text-4xl text-secondary-fixed/50 absolute top-4 left-4">format_quote</span>
+<p class="font-body-md text-body-md text-on-surface-variant mt-8 mb-6 italic">"Melhor almoço em Praia Grande! Buffet com muita variedade."</p>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold">C</div>
+<div>
+<div class="font-label-md text-label-md text-on-surface">Carlos A.</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Localização Section -->
+<section class="py-section-padding-mobile px-4 bg-surface-container-lowest" id="localizacao">
+<div class="container mx-auto max-w-container-max flex flex-col md:flex-row gap-12">
+<div class="w-full md:w-1/3">
+<span class="font-label-md text-label-md text-secondary mb-2 block uppercase tracking-wider">Onde Estamos</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mb-6">Venha nos visitar!</h2>
+<div class="space-y-6">
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<div>
+<p class="font-body-md text-body-md text-on-surface-variant font-medium">Av. Osasco, 754</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Cidade Oceân, Praia Grande - SP</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary">schedule</span>
+<div>
+<p class="font-body-md text-body-md text-on-surface-variant font-medium">Seg: Fechado</p>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Ter-Dom: 11h30 às 15h</p>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Qui-Sáb: 19h às 23h</p>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">(13) 3495-1360</p>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full md:w-2/3 h-[300px] md:h-auto rounded-2xl overflow-hidden shadow-sm border border-outline-variant/20 bg-surface-container relative">
+<!-- Mapa Placeholder -->
+<img alt="Mapa" class="w-full h-full object-cover opacity-50" data-alt="A clean, minimalist digital map interface showing a coastal area. The map uses a soft, muted color palette with pale beiges for land and soft blues for water. A subtle, elegant red marker pinpoints a specific location near the coastline. The style is modern, uncluttered, and sophisticated, fitting a high-end web interface." data-location="Praia Grande" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVOn3_0XxiOhwRHv6_8twi7o33YuA3wc6lCk9Oc0t81jm-PIJtiyQjSYGDI6AwlBjCbB96Mu4pI1JGhOuIqbQ6n8enjqr-lkVPPAoESi86K06UttvgJQoxBQPz6iECuCrgxrXcb7Xe4WTYpEsmwtB_2qooPN3oeiWSfLtVC2v5gxNpeVBV6FiucrMBvpsfQJkDZ5gbO3yP0HmwHxM6ILX50fN3oDzlsz_iOsKeaUAfSNlRCb4oOrIClYG-_BXhmPFNTO4TCOqOEl8"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="bg-surface/90 backdrop-blur-sm px-6 py-3 rounded-full shadow-lg border border-outline-variant/30 flex items-center gap-2">
+<span class="material-symbols-outlined text-error">location_on</span>
+<span class="font-label-md text-label-md text-on-surface">Ver no Mapa</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-12 px-4 bg-primary text-on-primary">
+<div class="container mx-auto max-w-container-max flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+<div class="flex items-center gap-4 flex-col md:flex-row">
+<div class="w-16 h-16 rounded-full bg-primary-container flex items-center justify-center border border-on-primary/20">
+<span class="material-symbols-outlined text-3xl">event_available</span>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md mb-1">Planeje seu almoço com a gente!</h2>
+<p class="font-body-md text-body-md text-on-primary/80">Faça sua reserva ou tire suas dúvidas pelo WhatsApp.</p>
+</div>
+</div>
+<button class="bg-on-primary text-primary font-label-md text-label-md py-4 px-8 rounded-full hover:bg-surface-container transition-colors shadow-lg whitespace-nowrap">
+                    FALE PELO WHATSAPP
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary dark:bg-primary-container text-on-primary dark:text-on-primary-container flex flex-col items-center text-center px-gutter py-12 w-full gap-8 flat no shadows full-width mb-16 md:mb-0">
+<div class="font-headline-md text-headline-md text-on-primary mb-4">Varandas</div>
+<nav class="flex flex-wrap justify-center gap-6">
+<a class="font-label-md text-label-md text-secondary-fixed font-bold underline" href="#">Início</a>
+<a class="font-label-md text-label-md text-on-primary/80 hover:text-secondary-fixed transition-colors" href="#sobre">Sobre</a>
+<a class="font-label-md text-label-md text-on-primary/80 hover:text-secondary-fixed transition-colors" href="#cardapio">Cardápio</a>
+<a class="font-label-md text-label-md text-on-primary/80 hover:text-secondary-fixed transition-colors" href="#localizacao">Localização</a>
+<a class="font-label-md text-label-md text-on-primary/80 hover:text-secondary-fixed transition-colors" href="#">Privacidade</a>
+</nav>
+<p class="font-body-md text-body-md text-on-primary/60 text-sm mt-4">© 2026 Varandas Restaurante - Todos os direitos reservados</p>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden bg-surface-container dark:bg-inverse-surface shadow-[0_-4px_20px_rgba(0,0,0,0.05)] docked full-width bottom-0 fixed rounded-t-full fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 pb-safe">
+<a class="flex flex-col items-center justify-center text-primary dark:text-primary-fixed-dim font-bold Active: scale-110 transition-transform duration-200 w-16" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-label-md text-[10px] mt-1">Início</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant/70 hover:text-primary transition-colors w-16" href="#cardapio">
+<span class="material-symbols-outlined">restaurant_menu</span>
+<span class="font-label-md text-[10px] mt-1">Cardápio</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant/70 hover:text-primary transition-colors w-16" href="#reservas">
+<span class="material-symbols-outlined">event_available</span>
+<span class="font-label-md text-[10px] mt-1">Reservas</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant/70 hover:text-primary transition-colors w-16" href="#contato">
+<span class="material-symbols-outlined">contact_support</span>
+<span class="font-label-md text-[10px] mt-1">Contato</span>
+</a>
+</nav>
+<style>
+        /* Utilities */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .pb-safe {
+            padding-bottom: env(safe-area-inset-bottom, 1rem);
+        }
+    </style>
+</body></html>
